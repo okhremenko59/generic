@@ -24,16 +24,16 @@ public class MagicBox<T> {
         for (int i = 0; i < items.length; i++) {
             if (items[i] == null) {
                 throw new RuntimeException(String.format("Коробка не полна, необходимо " +
-                        "добавить еще %d элемент(а) ", items.length-i));
+                        "добавить еще %d элемент(а) ", items.length - i));
             }
-            }
+        }
         int randomInt = random.nextInt(items.length);
         return items[randomInt];
     }
 
     @Override
     public String toString() {
-        for (T s: items) {
+        for (T s : items) {
             System.out.println(s);
         }
         return "";
